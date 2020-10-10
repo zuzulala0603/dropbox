@@ -13,6 +13,9 @@ app.use(favicon(path.join(__dirname, "public", "img", "favicon.ico")));
 app.get("/", (req, res) => {
   res.render("index");
 });
+app.get("/test", (req, res) => {
+  res.render("test");
+});
 //
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
