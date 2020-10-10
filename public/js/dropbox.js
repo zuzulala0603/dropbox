@@ -11,7 +11,11 @@ function readURL(input) {
       document.getElementById("removeBtn").style.display="flex"
     };
     reader.readAsDataURL(input.files[0]);
-    init()
+/*    startLoading() */
+   init().then(function() {
+ /*    predict() */
+});
+
   } else {
     removeUpload();
   }
