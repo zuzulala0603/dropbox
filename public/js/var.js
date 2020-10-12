@@ -1,6 +1,8 @@
 /* upload */
 
 let uploadUser = document.getElementById("upload__user");
+let uploadBtnArea = document.getElementById("upload__btnArea")
+let uploadOption = document.getElementById("upload__option")
 
 /* view width, height */
 
@@ -19,3 +21,8 @@ if (w > 1024) {
     element.style.height = 0.92 * h + "px";
   });
 }
+
+let isImgUploaded = 0
+
+
+let newResultHtml =""

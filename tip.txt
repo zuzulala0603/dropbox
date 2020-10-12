@@ -2,3 +2,12 @@
 git pull origin 브런치명 --allow-unrelated-histories
 
 git push --set-upstream origin main
+
+    startLoading()
+    init().then(()=>{
+      predict().then(()=>{
+        finishLoading()
+      })
+    })
+
+    $('.file-upload-input').trigger( 'click' )

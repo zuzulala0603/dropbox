@@ -2,7 +2,7 @@
       // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
       // the link to your model provided by Teachable Machine export panel
-      const URL = "https://teachablemachine.withgoogle.com/models/Wtend12ON/";
+      const URL = "https://teachablemachine.withgoogle.com/models/kjDHwpgms/";
 
       let model, webcam, labelContainer, maxPredictions;
 
@@ -18,21 +18,42 @@
         model = await tmImage.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
 
-        labelContainer = document.getElementById("label-container");
-        for (let i = 0; i < maxPredictions; i++) {
-          // and class labels
-          labelContainer.appendChild(document.createElement("div"));
-        }
+
         console.log("이닛이 완료?");
       }
 
       // run the webcam image through the image model
       async function predict() {
-        let userImg = document.getElementById("img__upload__user");
-        // predict can take in an image, video or canvas html element
+        let userImg = document.getElementById("upload__user__img");
+        let resultArray =[]
         const prediction = await model.predict(userImg, false);
         for (let i = 0; i < maxPredictions; i++) {
-          const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-          labelContainer.childNodes[i].innerHTML = classPrediction;
+          let percentage = prediction[i].probability.toFixed(2)*100;
+          let label = prediction[i].className
+          resultArray.push({"percentage":percentage, "label":label})
+          }
+          resultArray.sort(function (a, b) { 
+            return b.percentage - a.percentage 
+          });
+         
+        for(let j = 0 ; j< resultArray.length ; j++)
+        {
+          newResultHtml +=`    <div id="result__item" data-itemorder="${j}">
+          <div id="result__item__label" data-labelorder="${j}">
+            ${resultArray[j].label}
+          </div>
+  
+          <div id="result__item__progress">
+              <div id="result__item__progress__bar">
+                <div id="result__item__progress__bar__percentage" data-barorder="${j}" style="width: ${resultArray[j].percentage}%; min-width:7%">
+                </div>
+              </div>
+              <div id="result__item__progress__percentage" data-percentageorder="${j}">${resultArray[j].percentage}%</div>
+          </div>
+
+  
+          <div id="result__item__hr"></div>
+      </div>`
         }
+
       }

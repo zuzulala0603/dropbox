@@ -1,0 +1,24 @@
+#startBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 10vh;
+  margin: auto;
+  font-weight: bold;
+  color: white;
+  border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+  background-color: #51A9AB;
+}
+
+#changeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 10vh;
+  margin: auto;
+  color: white;
+  margin-top: 10vh;
+  background-color: navy;
+}

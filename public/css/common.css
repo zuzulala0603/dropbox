@@ -8,3 +8,14 @@
   width: 100vw;
   height: 100vh;
 } */
+
+.flipped {
+  width: 50%;
+  transform: rotate(0deg);
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
