@@ -1,5 +1,6 @@
 
 function readURL(input) {
+  hide(document.getElementById("upload__intro"))
   block(uploadBtnArea)
   flex(uploadOption)
   isImgUploaded =1

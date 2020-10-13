@@ -1,28 +1,75 @@
 #upload {
-  background-color: lightsalmon;
+  background-color: white;
 }
 
+#upload__intro{
+  display: flex;
+  background-color: #001E30;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+#upload__intro__main{
+  display: flex;
+  padding-top: 20%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  background-color: #001E30;
+}
+
+#upload__intro__main__img{
+  width: 50%;
+  height: 100%;
+}
+
+
+#upload__intro__upload{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 80%;
+  height: 10%;
+  border-radius: 10px;
+  background-color: #1098AD;
+}
+
+#upload__intro__upload__icon{
+  color: white;
+  font-size: 36px;
+
+}
+
+#upload__intro__upload:hover{
+  background-color: #0b7285;
+}
 #upload__option {
   display: none;
   justify-content: space-evenly;
   width: 100%;
   height: 10%;
-  background-color: olive;
+/*   background-color: olive; */
 }
 #upload__option__reversal {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20%;
-  height: 100%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   background-color: orange;
 }
 #upload__option__change {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20%;
-  height: 100%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   background-color: orange;
 }
 
@@ -31,7 +78,6 @@
   flex-wrap: wrap;
   width: 100%;
   height: 60%;
-  background-color: lightgray;
 }
 
 #upload__btnArea {
@@ -47,21 +93,18 @@
   margin: auto;
 }
 
-#removeBtn {
-  display: none;
-  width: 80%;
-  height: 15%;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  background-color: navy;
-  color: white;
-}
+
 
 @media screen and (max-width: 1024px) {
   #upload__user__img {
     width: 60%;
   }
+  #upload__intro__main__img{
+    width: 100%;
+    height: 100%;
+  }
+  
+
 }
 #upload__input {
   display: none;
