@@ -36,36 +36,61 @@
     </section>
     <section id="drag"></section>
     <section id="header"></section>
-    <section id="intro" class="main"></section>
-    <section id="upload" class="main" onclick="triggerClick()">
 
-
-      <div id="upload__intro">
-        <div id="upload__intro__main">
-          <img src="/static/img/main.png"  id="upload__intro__main__img"alt="" srcset="">
+    <section id="intro" >
+        <div id="intro__img">
+          <img src="/static/img/main.png"  id="intro__img__style"alt="" srcset="">
         </div>
-        <div id="upload__intro__upload">
-          시작하기
+        <div id="intro__btnArea">
+          <div id="intro__btnArea__startBtn">시작하기</div>
         </div>
+    </section>
 
+
+    <section id="upload" onclick="triggerClick()">
+
+      <div id="upload__dropbox">
+        <i class="fas fa-file-upload " style="padding-top : 20%;"></i>
+        <div id="upload__dropbox__title" style="font-size: 30px;font-weight: 900; padding-top : 15%;">파일 선택</div>
       </div>
+
+      
       <div id="upload__user" class="file-upload-content">
 
         <img id="upload__user__img" class="file-upload-image" src="#" alt="user image" />
         <div id="upload__option" class="image-title-wrap">
-          <div id="upload__option__reversal" class="filpBtn"><i class="fas fa-exchange-alt"></i></div>
-          <div id="upload__option__change" class="changeBtn"><i class="fas fa-trash-alt"></i></div>
+          <div id="upload__option__reversal" class="filpBtn">좌우 반전</div>
+          <div id="upload__option__change" class="changeBtn">사진 바꾸기</div>
         </div>
       </div>
 
       <div id="upload__btnArea" class="image-title-wrap">
-        <div onclick="startAi()" id="startBtn" class="resultBtn ">결과보기</div>
-<!--         <div onclick="removeUpload()" id="changeBtn" class="remove-image">사진 바꾸기</div> -->
-<!-- animate__animated animate__bounce -->
+        <div onclick="startAi()" id="startBtn" class="resultBtn ">결과보기 <i class="fas fa-arrow-right" style="position: relative; left: 50px;"></i></div>
       </div>
     </section>
     <input id="upload__input" class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*" />
-    <section id="footer"></section>
+    <section id="footer">
+      <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://zuzulala-resemble-male-idol.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
     <!--  -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
@@ -78,6 +103,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="/static/js/common.js"></script>
     <script src="/static/js/var.js"></script>
+    <script src="/static/js/intro.js"></script>
     <script src="/static/js/model.js"></script>
     <script src="/static/js/loading.js"></script>
     <script src="/static/js/dropbox.js"></script>

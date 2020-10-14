@@ -1,81 +1,64 @@
 #upload {
-  background-color: white;
+  display: none;
+  width: 100vw;
+  height: 92vh;
+  background-color: #d0d0d0;
 }
 
-#upload__intro{
+#upload__dropbox{
   display: flex;
-  background-color: #001E30;
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 500%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-}
-
-#upload__intro__main{
-  display: flex;
-  padding-top: 20%;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50%;
-  background-color: #001E30;
-}
-
-#upload__intro__main__img{
-  width: 50%;
-  height: 100%;
-}
-
-
-#upload__intro__upload{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
   width: 80%;
-  height: 10%;
-  border-radius: 10px;
-  background-color: #1098AD;
+  height: 40%;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-#upload__intro__upload__icon{
-  color: white;
-  font-size: 36px;
 
-}
-
-#upload__intro__upload:hover{
-  background-color: #0b7285;
-}
 #upload__option {
   display: none;
+  margin: 0 auto;
   justify-content: space-evenly;
-  width: 100%;
+  width: 60%;
   height: 10%;
+  font-weight: bold;
 /*   background-color: olive; */
 }
 #upload__option__reversal {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: orange;
+  width: 45%;
+  height: 30px;
+border: lightgray 5px solid;
+  border-radius: 0.75rem;
+  background-color: white;
 }
 #upload__option__change {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: orange;
+  width: 45%;
+  height: 30px;
+border: lightgray 5px solid;
+border-radius: 0.75rem;
+  background-color: white;
 }
 
 #upload__user {
   display: none;
   flex-wrap: wrap;
+  padding-top: 25%;
   width: 100%;
   height: 60%;
 }
@@ -91,9 +74,17 @@
   width: 40%;
   height: 60%;
   margin: auto;
+  border: lightgray 5px solid;
 }
 
+@media screen and (min-width: 1025px) {
+  #upload{
+    margin: auto;
+    width: 25vw;
+    height: 92vh;
 
+  }
+}
 
 @media screen and (max-width: 1024px) {
   #upload__user__img {

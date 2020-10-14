@@ -1,7 +1,10 @@
 
+
 function readURL(input) {
-  hide(document.getElementById("upload__intro"))
-  block(uploadBtnArea)
+  hide(document.getElementById("upload__dropbox"))
+  block(uploadPage)
+  uploadPage.style.backgroundColor="#eaf0f6"
+  flex(uploadBtnArea)
   flex(uploadOption)
   isImgUploaded =1
   if (input.files && input.files[0]) {

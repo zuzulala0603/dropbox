@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  height: 10vh;
+  width: 80%;
+  height: 8vh;
+  font-size: 125%;
   margin: auto;
   font-weight: bold;
   color: white;

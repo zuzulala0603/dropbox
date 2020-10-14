@@ -1,3 +1,9 @@
+/* page */
+let introPage = document.getElementById("intro")
+let uploadPage = document.getElementById("upload")
+let startBtn = document.getElementById("intro__btnArea__startBtn")
+
+
 /* upload */
 
 let uploadUser = document.getElementById("upload__user");
