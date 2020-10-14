@@ -1,8 +1,21 @@
+/* color */
+
+let firstColor = "#4641D9";
+let secondColor = "#3DB7CC";
+let thirdColor = "#47C83E";
+let fourthColor = "#998A00";
+let fifthColor = "#664B00";
+
+
 /* page */
 let introPage = document.getElementById("intro")
 let uploadPage = document.getElementById("upload")
-let startBtn = document.getElementById("intro__btnArea__startBtn")
+let resultPage = document.getElementById("result")
 
+
+/* btn */
+let startBtn = document.getElementById("intro__btnArea__startBtn")
+let againBtn = document.getElementById("result__againBtn")
 
 /* upload */
 
@@ -14,21 +27,12 @@ let uploadOption = document.getElementById("upload__option")
 
 let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
 if (w > 1024) {
-  document.querySelectorAll(".main").forEach((element) => {
-    element.style.width = 0.5 * w + "px";
-    element.style.height = 0.85 * h + "px";
-    element.style.margin = "auto";
-    /*     element.style.marginTop = "10vh"; */
-  });
-} else {
-  document.querySelectorAll(".main").forEach((element) => {
-    element.style.width = 1 * w + "px";
-    element.style.height = 0.92 * h + "px";
-  });
+    document.querySelector("body").style.backgroundColor = "#f0f0f0"
 }
 
 let isImgUploaded = 0
 
 
-let newResultHtml =""
+let newResultHtml = ""

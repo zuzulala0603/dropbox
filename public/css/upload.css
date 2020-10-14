@@ -2,10 +2,11 @@
   display: none;
   width: 100vw;
   height: 92vh;
-  background-color: #d0d0d0;
+  align-items: center;
+  background-color: #00253c;
 }
 
-#upload__dropbox{
+#upload__dropbox {
   display: flex;
   margin: auto;
   overflow: hidden;
@@ -21,7 +22,7 @@
   max-height: 300px;
   border-radius: 1rem;
   background-color: white;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  /*  */
 }
 
 
@@ -32,33 +33,35 @@
   width: 60%;
   height: 10%;
   font-weight: bold;
-/*   background-color: olive; */
+  /*   background-color: olive; */
 }
+
 #upload__option__reversal {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 45%;
   height: 30px;
-border: lightgray 5px solid;
-  border-radius: 0.75rem;
-  background-color: white;
+  color: white;
+  border-radius: 0.35rem;
+  background-color: #ae5654;
 }
+
 #upload__option__change {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 45%;
   height: 30px;
-border: lightgray 5px solid;
-border-radius: 0.75rem;
-  background-color: white;
+  color: white;
+  border-radius: 0.35rem;
+  background-color: #ae5654;
 }
 
 #upload__user {
   display: none;
   flex-wrap: wrap;
-  padding-top: 25%;
+  padding-top: 10%;
   width: 100%;
   height: 60%;
 }
@@ -70,15 +73,19 @@ border-radius: 0.75rem;
   padding-top: 10%;
   margin: auto;
 }
+
 #upload__user__img {
-  width: 40%;
+  width: 60%;
   height: 60%;
   margin: auto;
-  border: lightgray 5px solid;
+  border-radius: 0.5rem;
+  border: lightgray 0.5px solid;
 }
 
 @media screen and (min-width: 1025px) {
-  #upload{
+
+  /* desk */
+  #upload {
     margin: auto;
     width: 25vw;
     height: 92vh;
@@ -87,19 +94,24 @@ border-radius: 0.75rem;
 }
 
 @media screen and (max-width: 1024px) {
+
+  /* mobile */
   #upload__user__img {
     width: 60%;
   }
-  #upload__intro__main__img{
+
+  #upload__intro__main__img {
     width: 100%;
     height: 100%;
   }
-  
+
 
 }
+
 #upload__input {
   display: none;
 }
+
 #uploadIcon {
   position: absolute;
   color: white;

@@ -1,6 +1,4 @@
-
-startBtn.addEventListener("click",()=>{
-
+startBtn.addEventListener("click", () => {
     hide(introPage)
     flex(uploadPage)
 })

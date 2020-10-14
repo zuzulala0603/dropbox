@@ -1,10 +1,9 @@
 let loadingPage = document.getElementById("loading")
 
-function startLoading(){
+function startLoading() {
     block(loadingPage)
 }
 
-function finishLoading(){
+function finishLoading() {
     hide(loadingPage)
 }
-

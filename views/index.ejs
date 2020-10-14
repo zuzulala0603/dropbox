@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/common.css" />
     <link rel="stylesheet" href="/static/css/all.css" />
     <link rel="stylesheet" href="/static/css/loading.css" />
@@ -14,93 +18,128 @@
     <link rel="stylesheet" href="/static/css/dropbox.css" />
     <link rel="stylesheet" href="/static/css/upload.css" />
     <link rel="stylesheet" href="/static/css/result.css" />
-    <link    rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title>메인페이지</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--  -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f868b269df12ee4"></script>
+    <!--  -->
+    <title> 메인페이지 </title>
+</head>
+
+<body>
     <i class="fas fa-plus" id="drag__icon"> </i>
     <section id="loading">
-      <div id="loading__bar" class="loader">
-        <div class="line-spin-fade-loader">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div id="loading__bar" class="loader">
+            <div class="line-spin-fade-loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
-      </div>
-      <div id="loading__title">결과를 불러오고 있습니다.</div>
+        <div id="loading__title">결과를 불러오고 있습니다.</div>
     </section>
     <section id="drag"></section>
     <section id="header"></section>
 
-    <section id="intro" >
+    <section id="intro">
         <div id="intro__img">
-          <img src="/static/img/main.png"  id="intro__img__style"alt="" srcset="">
-        </div>
+            <img src="/static/img/main.png" id="intro__img__style" alt="" srcset=""></div>
         <div id="intro__btnArea">
-          <div id="intro__btnArea__startBtn">시작하기</div>
+            <div id="intro__btnArea__startBtn">시작하기</div>
         </div>
     </section>
-
 
     <section id="upload" onclick="triggerClick()">
-
-      <div id="upload__dropbox">
-        <i class="fas fa-file-upload " style="padding-top : 20%;"></i>
-        <div id="upload__dropbox__title" style="font-size: 30px;font-weight: 900; padding-top : 15%;">파일 선택</div>
-      </div>
-
-      
-      <div id="upload__user" class="file-upload-content">
-
-        <img id="upload__user__img" class="file-upload-image" src="#" alt="user image" />
-        <div id="upload__option" class="image-title-wrap">
-          <div id="upload__option__reversal" class="filpBtn">좌우 반전</div>
-          <div id="upload__option__change" class="changeBtn">사진 바꾸기</div>
+        <div id="upload__dropbox">
+            <i class="fas fa-file-upload " style="padding-top : 20%;"></i>
+            <div id="upload__dropbox__title" style="font-size: 30px;font-weight: 900; padding-top : 15%;">파일 선택 </div>
         </div>
-      </div>
-
-      <div id="upload__btnArea" class="image-title-wrap">
-        <div onclick="startAi()" id="startBtn" class="resultBtn ">결과보기 <i class="fas fa-arrow-right" style="position: relative; left: 50px;"></i></div>
-      </div>
+        <!--         <div id="upload__dropbox__comment">본 서비스는 사진을 저장하지 않습니다.</div> -->
+        <div id="upload__user" class="file-upload-content">
+            <img id="upload__user__img" class="file-upload-image" src="#" alt="user image" />
+            <div id="upload__option" class="image-title-wrap">
+                <div id="upload__option__reversal" class="filpBtn">좌우 반전</div>
+                <div id="upload__option__change" class="changeBtn">사진 바꾸기</div>
+            </div>
+        </div>
+        <div id="upload__btnArea" class="image-title-wrap">
+            <div onclick="startAi()" id="startBtn" class="resultBtn ">결과보기
+                <i class="fas fa-arrow-right" style="position: relative; left: 50px;"></i>
+            </div>
+        </div>
     </section>
-    <input id="upload__input" class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*" />
-    <section id="footer">
-      <div id="disqus_thread"></div>
-<script>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://zuzulala-resemble-male-idol.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <section id="result">
+
+        <div id="result__img">
+            <img id="result__img__style" src="#" alt="" srcset="">
+        </div>
+        <div id="result__title">내가 닮은 아이돌 : 차은우</div>
+        <div id="result__list">
+            <!--             <div id="result__list__item__title">내가 닮은 남자 아이돌</div> -->
+            <div id="result__list__item">
+                <div id="result__list__item__label">차은우</div>
+                <div id="result__list__item__percentageBox">
+                    <div id="result__list__item__percentageBox__bar"></div>
+                </div>
+                <div id="result__list__item__percentageBox__percentage">615%</div>
+            </div>
+
+
+            <div id="result__list__item">
+                <div id="result__list__item__label">백현</div>
+                <div id="result__list__item__percentageBox">
+                    <div id="result__list__item__percentageBox__bar"></div>
+                </div>
+                <div id="result__list__item__percentageBox__percentage">0%</div>
+            </div>
+
+        </div>
+        <div id="result__share">
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_inline_share_toolbox_aoqm"></div>
+        </div>
+        <div id="result__againBtn">다시하기</div>
+        <div id="disqus_thread"></div>
+        <script>
+
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://chuchuidolmale.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
     </section>
+
+
     <!--  -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <input id="upload__input" class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*" />
+    <section id="comment">
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-   
- 
+
+
     <!--  -->
 
     <!--  -->
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f868b269df12ee4"></script>
     <script src="/static/js/common.js"></script>
     <script src="/static/js/var.js"></script>
     <script src="/static/js/intro.js"></script>
@@ -108,26 +147,24 @@ s.setAttribute('data-timestamp', +new Date());
     <script src="/static/js/loading.js"></script>
     <script src="/static/js/dropbox.js"></script>
     <script src="/static/js/drag.js"></script>
-    <script src="/static/js/alert.js"></script>
     <script src="/static/js/option.js"></script>
+    <script src="/static/js/result.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script>
-/*   Swal.fire({title: `결과표`,
-    html:`    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo doloremque commodi repudiandae, eius quae in sapiente repellat obcaecati omnis dolore amet enim molestias eos vel non. Ratione est perspiciatis quam.
+    <script>/*   Swal.fire({title: `결과표`,
+html:`    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo doloremque commodi repudiandae, eius quae in sapiente repellat obcaecati omnis dolore amet enim molestias eos vel non. Ratione est perspiciatis quam.
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo doloremque commodi repudiandae, eius quae in sapiente repellat obcaecati omnis dolore amet enim molestias eos vel non. Ratione est perspiciatis quam.
 `,
-    showCloseButton: true,
-}) */
-    </script>
-  </body>
-  <!-- LICENSE -->
-  <!-- FOR IMG UPLOAD -->
-  <!--   Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+showCloseButton: true,
+}) */</script>
+</body>
+<!-- LICENSE -->
+<!-- FOR IMG UPLOAD -->
+<!--   Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+                                                                                                                                
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+                                                                                                                                
+                                                                                                                                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                                                                                                                                 -->
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- -->
 </html>
+</body>
