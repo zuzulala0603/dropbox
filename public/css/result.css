@@ -26,7 +26,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    color: #56AC8A;
+    color: #1d56be;
     width: 80%;
     height: 10vh;
     margin-top: 0%;
@@ -41,7 +41,7 @@
     width: 90%;
     min-height: 5vh;
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 2.5%;
     font-family: 'Jua', sans-serif;
 }
 
@@ -51,7 +51,7 @@
     align-items: center;
     margin-top: 5%;
     width: 100%;
-    height: 5vh;
+    height: 3.5vh;
     font-weight: 900;
 }
 
@@ -107,7 +107,7 @@
     width: 80%;
     height: 8vh;
     font-size: 125%;
-    margin: 15% auto;
+    margin: 5% auto;
     font-weight: bold;
     color: white;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
@@ -143,42 +143,50 @@
 
 /*---------------------------- */
 .result__list__item__0th {
-    color: #56AC8A;
-}
-
-.result__list__item__1th {
-    color: #a95375;
-}
-
-.result__list__item__2th {
-    color: #E2A939;
-}
-
-.result__list__item__3th {
     color: #1d56be;
 }
 
+.result__list__item__1th {
+    color: #56AC8A;
+}
+
+.result__list__item__2th {
+    color: #51A9AF;
+}
+
+.result__list__item__3th {
+    color: #e2a941;
+}
+
 .result__list__item__4th {
-    color: #FFBB00;
+    color: #ae5650;
+}
+
+.result__list__item__5th {
+    color: #1F2A3C;
 }
 
 /*---------------------------- */
 .result__list__item__0th__percentageBox {
-    background-color: #56AC8A;
-}
-
-.result__list__item__1th__percentageBox {
-    background-color: #a95375;
-}
-
-.result__list__item__2th__percentageBox {
-    background-color: #E2A939;
-}
-
-.result__list__item__3th__percentageBox {
     background-color: #1d56be;
 }
 
+.result__list__item__1th__percentageBox {
+    background-color: #56AC8A;
+}
+
+.result__list__item__2th__percentageBox {
+    background-color: #51A9AF;
+}
+
+.result__list__item__3th__percentageBox {
+    background-color: #e2a941;
+}
+
 .result__list__item__4th__percentageBox {
-    background-color: #FFBB00;
+    background-color: #ae5650;
+}
+
+.result__list__item__5th__percentageBox {
+    background-color: #1F2A3C;
 }

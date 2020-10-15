@@ -2,7 +2,7 @@
 // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
 // the link to your model provided by Teachable Machine export panel
-const URL = "https://teachablemachine.withgoogle.com/models/kjDHwpgms/";
+const URL = "https://teachablemachine.withgoogle.com/models/IUMLkbehi/";
 
 let model,
     webcam,
@@ -21,8 +21,6 @@ async function init() {
     model = await tmImage.load(modelURL, metadataURL);
     maxPredictions = model.getTotalClasses();
 
-
-    console.log("이닛이 완료?");
 }
 
 // run the webcam image through the image model
@@ -32,6 +30,7 @@ async function predict() {
     const prediction = await model.predict(userImg, false);
     for (let i = 0; i < maxPredictions; i++) {
         let percentage = prediction[i].probability.toFixed(2) * 100;
+        percentage = Math.floor(percentage)
         let label = prediction[i].className
         if (percentage !== 0)
             resultArray.push({ "percentage": percentage, "label": label })
@@ -41,12 +40,13 @@ async function predict() {
 
     });
 
+    document.getElementById("result__title").innerHTML = `내가 닮은 아이돌 : ${resultArray[0].label}`
     for (let j = 0; j < 6; j++) {
         if (resultArray[j] != undefined) {
             newResultHtml += `            <div id="result__list__item">
         <div id="result__list__item__label" class="result__list__item__${j}th"> ${resultArray[j].label}</div>
         <div id="result__list__item__percentageBox">
-            <div id="result__list__item__percentageBox__bar" class="result__list__item__${j}th__percentageBox" style="width: ${resultArray[j].percentage}%; min-width:7%"></div>
+            <div id="result__list__item__percentageBox__bar" class="result__list__item__${j}th__percentageBox" style="width: ${resultArray[j].percentage}%; min-width:10%"></div>
         </div>
         <div id="result__list__item__percentageBox__percentage" class="result__list__item__${j}th">${resultArray[j].percentage}%</div>
     </div>`

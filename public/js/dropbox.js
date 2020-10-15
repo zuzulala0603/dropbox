@@ -37,7 +37,6 @@ function startAi() {
 
 
 function triggerClick() {
-    console.log("isImgUploaded는", isImgUploaded)
     if (isImgUploaded == 0) {
         $('.file-upload-input').trigger('click')
     }
@@ -62,7 +61,6 @@ $(".image-upload-wrap").bind("dragleave", function () {
 
 
 function showResult() {
-
     block(resultPage)
     let resultList = document.getElementById("result__list")
     resultList.innerHTML = newResultHtml
