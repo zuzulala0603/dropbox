@@ -11,6 +11,7 @@ let fifthColor = "#664B00";
 let introPage = document.getElementById("intro")
 let uploadPage = document.getElementById("upload")
 let resultPage = document.getElementById("result")
+let recommandPage = document.getElementById("recommand")
 
 
 /* btn */

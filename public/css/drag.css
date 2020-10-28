@@ -9,13 +9,3 @@
   opacity: 0.7;
   z-index: 100;
 }
-
-#drag__icon {
-  display: none;
-  position: absolute;
-  left: 45vw;
-  top: 30vh;
-  z-index: 999;
-  color: white;
-  font-size: 250px;
-}

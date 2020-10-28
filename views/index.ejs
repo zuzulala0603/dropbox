@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/static/css/dropbox.css" />
     <link rel="stylesheet" href="/static/css/upload.css" />
     <link rel="stylesheet" href="/static/css/result.css" />
+    <link rel="stylesheet" href="/static/css/recommand.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!--  -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f868b269df12ee4"></script>
@@ -26,7 +27,26 @@
 </head>
 
 <body>
-    <i class="fas fa-plus" id="drag__icon"> </i>
+
+
+    <section id="recommand">
+        <div id="recommand__header">
+            <i id="recommand__header__close" class="fas fa-times-circle"></i>
+        </div>
+        <div id="recommand__item">
+
+
+            <div id="recommand__item__img"></div>
+
+            <div id="recommand__item__badgeArea">
+                <a
+                    href='https://play.google.com/store/apps/details?id=com.zuzulala.chuchugame_flag&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
+                        alt='다운로드하기 Google Play' id="recommand__item__badgeArea__badge"
+                        src='https://play.google.com/intl/ko/badges/static/images/badges/ko_badge_web_generic.png' /></a>
+            </div>
+
+        </div>
+    </section>
     <section id="loading">
         <div id="loading__bar" class="loader">
             <div class="line-spin-fade-loader">
@@ -43,7 +63,13 @@
         <div id="loading__title">결과를 불러오고 있습니다.</div>
     </section>
     <section id="drag"></section>
-    <section id="header"></section>
+    <section id="header">
+
+        <div id="header__menu__mobile" class="menuIcon">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </section>
 
     <section id="intro">
         <div id="intro__img">
@@ -109,8 +135,6 @@
 
     <!--  -->
     <input id="upload__input" class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*" />
-    <section id="comment">
-    </section>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 
@@ -123,6 +147,7 @@
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f868b269df12ee4"></script>
     <script src="/static/js/common.js"></script>
     <script src="/static/js/var.js"></script>
+    <script src="/static/js/menu.js"></script>
     <script src="/static/js/intro.js"></script>
     <script src="/static/js/model.js"></script>
     <script src="/static/js/loading.js"></script>

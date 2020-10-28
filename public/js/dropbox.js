@@ -65,3 +65,8 @@ function showResult() {
     let resultList = document.getElementById("result__list")
     resultList.innerHTML = newResultHtml
 }
+
+
+function showRecommand() {
+    block(recommandPage)
+}

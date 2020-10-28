@@ -2,3 +2,13 @@
   background-color: lightcoral;
   height: 8vh;
 }
+
+#header__menu__mobile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  font-size: 175%;
+  color: white;
+  margin-right: 20px;
+}
